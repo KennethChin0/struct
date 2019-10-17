@@ -13,13 +13,12 @@ struct ppg example(){
   struct ppg randomPlayer;
   char names[5][13] = {"James", "Irving", "Antetokounmpo", "George", "Leonard"};
   int points[5] = {35, 30, 25, 29, 28};
-  srand(time(0));
-  strcpy(randomPlayer.name , names[rand() % 5]);
-  randomPlayer.points = points[rand() % 5];
+  strcpy(randomPlayer.name , names[rand() % 5]); // assigns randomPlayer random name from array names
+  randomPlayer.points = points[rand() % 5];// assigns randomPlayer random points from array points
   return randomPlayer;
 }
 
 void modify(struct ppg *player, char *newName, int newPoints){
-  strcpy(player->name, newName);
-  player->points = newPoints;
+  strcpy(player->name, newName); // asssigns player new name
+  player->points = newPoints; // assisngs player new points
 }
